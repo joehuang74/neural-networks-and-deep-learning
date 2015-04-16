@@ -1,8 +1,8 @@
-import mnist_loader_with_print_msg
+import mnist_loader_with_printed_msg
 import network
 
 #training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
-training_data, validation_data, test_data = mnist_loader_with_print_msg.load_data_wrapper()
+training_data, validation_data, test_data = mnist_loader_with_printed_msg.load_data_wrapper()
 
 """ 
 Build a three-layer neural network given the number of neurons for each layer
