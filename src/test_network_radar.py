@@ -2,7 +2,9 @@ import light_format_feature_loader
 import network
 import glob
 import os
+import shutil
 from case_config import *
+
 
 #result_log_file = '../data/tmp_result_log_file.txt'
 #log_fp = open(result_log_file, 'w')
@@ -13,8 +15,8 @@ n_rainfall_indexes = 100 # for use in vectorized form of rainfall label (number 
 size_hidden_layer = 30 # Number of neurons for hidden layer
 
 case_list = []
-case_list.append(CASE1_SINGLE)
-case_list.append(CASE2_1_STAT)
+#case_list.append(CASE1_SINGLE)
+#case_list.append(CASE2_1_STAT)
 case_list.append(CASE2_2_1_JOINED_MID_MEAN)
 case_list.append(CASE2_2_2_JOINED_MID_MEAN_ELEV)
 case_list.append(CASE2_2_3_JOINED_MID_MEAN_PROD)
@@ -27,15 +29,26 @@ case_list.append(CASE2_4_3_JOINED_MID_MEAN_MIN5_PROD)
 case_list.append(CASE3_1_JOINED_ELEV)
 case_list.append(CASE3_2_JOINED_PROD)
 
+result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_TRAINSET
+#result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_HourlyAggr_TRAINSET
+if not os.path.exists(result_log_dir):
+    os.makedirs(result_log_dir)
+else:
+    shutil.rmtree(result_log_dir)
+    os.makedirs(result_log_dir)
+
+previous_case_dir = case_list[0]
+result_log_file = result_log_dir + "/" + case_list[0] + ".log"
+log_fp = open(result_log_file, 'a')
 for case_dir in case_list:
     training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_TRAINSET + "\\" + case_dir
     #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_HourlyAggr_TRAINSET + "\\" + case_dir
-    
-    result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_TRAINSET 
     result_log_file = result_log_dir + "/" + case_dir + ".log"
-    if not os.path.exists(result_log_dir):
-        os.makedirs(result_log_dir)
-    log_fp = open(result_log_file, 'w')
+    
+    if previous_case_dir != case_dir:
+        log_fp.close()
+    if log_fp.closed:
+        log_fp = open(result_log_file, 'a')
 
     filepath_list = glob.glob(training_data_dir + "\svm_traindata.txt.1a.*")
 
@@ -59,7 +72,7 @@ for case_dir in case_list:
     """
     Hyper-parameters
     """
-    epoches = 3
+    epoches = 20
     mini_batch_size = 10
     training_rate = 2.0
 
@@ -111,5 +124,6 @@ for case_dir in case_list:
                     epoches, correctly_classified, len(test_data), 100*correctly_classified/len(test_data)))
         log_fp.write("\n")
 
-    log_fp.close()
+    log_fp.flush()
+    previous_case_dir = case_dir
 
