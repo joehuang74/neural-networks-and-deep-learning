@@ -4,10 +4,17 @@ FEATURE_DIR_ROOT = "D:\\";
 # Feature file directories
 SVMDATA_10minPrecAsLabel = "svmdata.10minPrecipAsLabel";
 SVMDATA_10minPrecAsLabel_HourlyAggr = "svmdata.10minPrecipAsLabel.HourlyAggr";
+SVMDATA_10minPrecAsLabel_FuzzyLabel = "svmdata.10minPrecipAsLabel.FuzzyLabel";
+SVMDATA_10minPrecAsLabel_HourlyAggr_FuzzyLabel = "svmdata.10minPrecipAsLabel.HourlyAggr.FuzzyLabel";
+
 SVMDATA_10minPrecAsLabel_TRAINSET = "svmdata.10minPrecipAsLabel.trainset";
 SVMDATA_10minPrecAsLabel_TESTSET = "svmdata.10minPrecipAsLabel.testset";
-SVMDATA_10minPrecAsLabel_HourlyAggr_TRAINSET = "svmdata.10minPrecipAsLabel.hourlyaggr.trainset";
-SVMDATA_10minPrecAsLabel_HourlyAggr_TESTSET = "svmdata.10minPrecipAsLabel.hourlyaggr.testset";
+SVMDATA_10minPrecAsLabel_HourlyAggr_TRAINSET = "svmdata.10minPrecipAsLabel.HourlyAggr.trainset";
+SVMDATA_10minPrecAsLabel_HourlyAggr_TESTSET = "svmdata.10minPrecipAsLabel.HourlyAggr.testset";
+SVMDATA_10minPrecAsLabel_FuzzyLabel_TRAINSET = "svmdata.10minPrecipAsLabel.FuzzyLabel.trainset";
+SVMDATA_10minPrecAsLabel_FuzzyLabel_TESTSET = "svmdata.10minPrecipAsLabel.FuzzyLabel.testset";
+SVMDATA_10minPrecAsLabel_HourlyAggr_TRAINSET = "svmdata.10minPrecipAsLabel.HourlyAggr.FuzzyLabel.trainset";
+SVMDATA_10minPrecAsLabel_HourlyAggr_TESTSET = "svmdata.10minPrecipAsLabel.HourlyAggr.FuzzyLabel.testset";
 
 # Feature file sub-directories for various cases
 # CASE1_SINGLE+".withObsTime" is where the raw files are placed and should not be removed
