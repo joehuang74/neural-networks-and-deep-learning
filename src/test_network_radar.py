@@ -25,10 +25,10 @@ case_list.append(CASE2_3_2_JOINED_MID_MEAN_MAX5_ELEV)
 case_list.append(CASE3_1_JOINED_ELEV)
 case_list.append(CASE3_2_JOINED_PROD)
 
-#result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_TRAINSET
-#result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_HourlyAggr_TRAINSET
-result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_FuzzyLabel_TRAINSET
-#result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_HourlyAggr_FuzzyLabel_TRAINSET
+#result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel
+#result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_HourlyAggr
+result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_FuzzyLabel
+#result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_HourlyAggr_FuzzyLabel
 
 if not os.path.exists(result_log_dir):
     os.makedirs(result_log_dir)
@@ -40,10 +40,10 @@ previous_case_dir = case_list[0]
 result_log_file = result_log_dir + "/" + case_list[0] + ".log"
 log_fp = open(result_log_file, 'a')
 for case_dir in case_list:
-    #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_TRAINSET + "\\" + case_dir
-    #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_HourlyAggr_TRAINSET + "\\" + case_dir
-    training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_FuzzyLabel_TRAINSET + "\\" + case_dir
-    #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_HourlyAggr_FuzzyLabel_TRAINSET + "\\" + case_dir
+    #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel + "\\" + case_dir
+    #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_HourlyAggr + "\\" + case_dir
+    training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_FuzzyLabel + "\\" + case_dir
+    #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_HourlyAggr_FuzzyLabel + "\\" + case_dir
     result_log_file = result_log_dir + "/" + case_dir + ".log"
     
     if previous_case_dir != case_dir:
@@ -56,8 +56,13 @@ for case_dir in case_list:
     filename_list = []
     print "==== Training file list ===="
     for filepath in filepath_list:
-        if os.path.basename(filepath).find("log") == -1:
-            filename_list.append(os.path.basename(filepath))
+        if os.path.basename(filepath).find("log") != -1:
+            continue
+        if os.path.basename(filepath).find(".model") != -1:
+            continue
+        if os.path.basename(filepath).find(".scaledData") != -1:
+            continue
+        filename_list.append(os.path.basename(filepath))
 
     # Manual setting of training files
     #filename_list = []

@@ -16,6 +16,7 @@ function usually called by our neural network code.
 # Third-party libraries
 import numpy as np
 import re
+import math
 
 def parse_line(line):
     date_found = re.search('^20[0-9][0-9][0-9][0-9][0-9][0-9]_[0-9][0-9][0-9][0-9]', line)
@@ -83,30 +84,49 @@ def load_data(training_file):
     f = open(training_file, "r")
     lines = f.readlines()
     number_of_feature_vectors = len(lines)
-    feature_collection = []
-    feature_label_collection = []
+    number_of_training_vectors = math.floor(number_of_feature_vectors * 0.8)
+  
+    trainset = []
+    trainset_label = []
+    testset = []
+    testset_label = []
     
     if number_of_feature_vectors == 0:
         return (None, None, None, None)
+    if number_of_training_vectors == 0:
+        return (None, None, None, None)
+    
     
     (_arg0, _arg1, dimension) = parse_line(lines[0])
+    count = 0
     for line in lines:
         (_label, _feature_vector, _dimension) = parse_line(line)
         if _dimension != dimension:
             print "[Error] Inconsistent dimension found in the training data"
             return (None, None, None, None)
-        feature_collection.append(_feature_vector)
-        feature_label_collection.append(_label)
+        if count < number_of_training_vectors:
+           trainset.append(_feature_vector)
+           trainset_label.append(_label)
+        else:
+           testset.append(_feature_vector)
+           testset_label.append(_label)
+        count = count + 1
+        
+    print "len(trainset): " + str(len(trainset))
+    print "len(testset): " + str(len(testset))
     
-    if len(feature_label_collection) > 0:
-        feature_label_collection[0]
-    
-    features_ndarray = np.array(feature_collection)
-    labels_ndarray = np.array(feature_label_collection)
-    training_data_list = [features_ndarray, labels_ndarray]
+    trainset_ndarray = np.array(trainset)
+    trainset_labels_ndarray = np.array(trainset_label)
+    training_data_list = [trainset_ndarray, trainset_labels_ndarray]
     training_data = tuple(training_data_list)
+    
+    testset_ndarray = np.array(testset)
+    testset_labels_ndarray = np.array(testset_label)
+    test_data_list = [testset_ndarray, testset_labels_ndarray]
+    test_data = tuple(test_data_list)
+    
     validation_data = training_data
-    test_data = training_data
+    test_data = test_data
     
     # print training_data
 
