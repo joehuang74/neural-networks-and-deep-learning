@@ -1,0 +1,299 @@
+===== Training file list =====
+svm_traindata.txt.1a.KDP_0.5_0.5.fuzzy
+svm_traindata.txt.1a.KDP_1.5_1.5.fuzzy
+svm_traindata.txt.1a.KDP_2.4_2.4.fuzzy
+svm_traindata.txt.1a.KDP_3.4_3.4.fuzzy
+svm_traindata.txt.1a.KDP_4.3_4.3.fuzzy
+svm_traindata.txt.1a.KDP_6.0_6.0.fuzzy
+svm_traindata.txt.1a.ZDR_0.5_0.5.fuzzy
+svm_traindata.txt.1a.ZDR_1.5_1.5.fuzzy
+svm_traindata.txt.1a.ZDR_2.4_2.4.fuzzy
+svm_traindata.txt.1a.ZDR_3.4_3.4.fuzzy
+svm_traindata.txt.1a.ZDR_4.3_4.3.fuzzy
+svm_traindata.txt.1a.ZDR_6.0_6.0.fuzzy
+svm_traindata.txt.1a.Z_0.5_0.5.fuzzy
+svm_traindata.txt.1a.Z_1.5_1.5.fuzzy
+svm_traindata.txt.1a.Z_2.4_2.4.fuzzy
+svm_traindata.txt.1a.Z_3.4_3.4.fuzzy
+svm_traindata.txt.1a.Z_4.3_4.3.fuzzy
+svm_traindata.txt.1a.Z_6.0_6.0.fuzzy
+training_data_dir: D:\\svmdata.10minPrecipAsLabel.FuzzyLabel\svm_case1_merged_all_single
+rainfall_min_value: 0
+rainfall_max_value: 100
+n_rainfall_indexes(Number of neurons for output-layer): 100
+size_hidden_layer(Number of neurons for hidden-layer): 30
+kernel type: Sigmoid
+epoches: 20
+mini_batch_size: 10
+training_rate: 2.0
+
+===== svm_traindata.txt.1a.KDP_0.5_0.5.fuzzy =====
+dimension(Number of neurons for input layer) : 25
+number of training examples: 1145  test examples: 287
+Epoch 0: 0 / 287
+Epoch 1: 115 / 287
+Epoch 2: 121 / 287
+Epoch 9: 123 / 287
+Epoch 10: 141 / 287
+Epoch 11: 128 / 287
+Epoch 12: 137 / 287
+Epoch 17: 138 / 287
+Epoch 18: 125 / 287
+Epoch 19: 140 / 287
+Result after 20 epoches: 140 / 287  (48%)
+
+===== svm_traindata.txt.1a.KDP_1.5_1.5.fuzzy =====
+dimension(Number of neurons for input layer) : 25
+number of training examples: 1140  test examples: 286
+Epoch 0: 8 / 286
+Epoch 1: 114 / 286
+Epoch 2: 135 / 286
+Epoch 9: 124 / 286
+Epoch 10: 130 / 286
+Epoch 11: 142 / 286
+Epoch 12: 132 / 286
+Epoch 17: 129 / 286
+Epoch 18: 147 / 286
+Epoch 19: 121 / 286
+Result after 20 epoches: 121 / 286  (42%)
+
+===== svm_traindata.txt.1a.KDP_2.4_2.4.fuzzy =====
+dimension(Number of neurons for input layer) : 25
+number of training examples: 1142  test examples: 286
+Epoch 0: 0 / 286
+Epoch 1: 0 / 286
+Epoch 2: 0 / 286
+Epoch 9: 0 / 286
+Epoch 10: 0 / 286
+Epoch 11: 0 / 286
+Epoch 12: 0 / 286
+Epoch 17: 122 / 286
+Epoch 18: 113 / 286
+Epoch 19: 115 / 286
+Result after 20 epoches: 115 / 286  (40%)
+
+===== svm_traindata.txt.1a.KDP_3.4_3.4.fuzzy =====
+dimension(Number of neurons for input layer) : 25
+number of training examples: 1142  test examples: 286
+Epoch 0: 111 / 286
+Epoch 1: 114 / 286
+Epoch 2: 123 / 286
+Epoch 9: 115 / 286
+Epoch 10: 128 / 286
+Epoch 11: 128 / 286
+Epoch 12: 130 / 286
+Epoch 17: 137 / 286
+Epoch 18: 135 / 286
+Epoch 19: 117 / 286
+Result after 20 epoches: 117 / 286  (40%)
+
+===== svm_traindata.txt.1a.KDP_4.3_4.3.fuzzy =====
+dimension(Number of neurons for input layer) : 25
+number of training examples: 1141  test examples: 286
+Epoch 0: 0 / 286
+Epoch 1: 0 / 286
+Epoch 2: 0 / 286
+Epoch 9: 122 / 286
+Epoch 10: 123 / 286
+Epoch 11: 115 / 286
+Epoch 12: 116 / 286
+Epoch 17: 123 / 286
+Epoch 18: 115 / 286
+Epoch 19: 123 / 286
+Result after 20 epoches: 123 / 286  (43%)
+
+===== svm_traindata.txt.1a.KDP_6.0_6.0.fuzzy =====
+dimension(Number of neurons for input layer) : 25
+number of training examples: 1140  test examples: 286
+Epoch 0: 121 / 286
+Epoch 1: 112 / 286
+Epoch 2: 111 / 286
+Epoch 9: 119 / 286
+Epoch 10: 116 / 286
+Epoch 11: 125 / 286
+Epoch 12: 119 / 286
+Epoch 17: 114 / 286
+Epoch 18: 119 / 286
+Epoch 19: 113 / 286
+Result after 20 epoches: 113 / 286  (39%)
+
+===== svm_traindata.txt.1a.ZDR_0.5_0.5.fuzzy =====
+dimension(Number of neurons for input layer) : 25
+number of training examples: 1145  test examples: 287
+Epoch 0: 127 / 287
+Epoch 1: 127 / 287
+Epoch 2: 108 / 287
+Epoch 9: 129 / 287
+Epoch 10: 110 / 287
+Epoch 11: 130 / 287
+Epoch 12: 112 / 287
+Epoch 17: 116 / 287
+Epoch 18: 132 / 287
+Epoch 19: 121 / 287
+Result after 20 epoches: 121 / 287  (42%)
+
+===== svm_traindata.txt.1a.ZDR_1.5_1.5.fuzzy =====
+dimension(Number of neurons for input layer) : 25
+number of training examples: 1140  test examples: 286
+Epoch 0: 3 / 286
+Epoch 1: 4 / 286
+Epoch 2: 5 / 286
+Epoch 9: 132 / 286
+Epoch 10: 126 / 286
+Epoch 11: 116 / 286
+Epoch 12: 115 / 286
+Epoch 17: 119 / 286
+Epoch 18: 124 / 286
+Epoch 19: 116 / 286
+Result after 20 epoches: 116 / 286  (40%)
+
+===== svm_traindata.txt.1a.ZDR_2.4_2.4.fuzzy =====
+dimension(Number of neurons for input layer) : 25
+number of training examples: 1142  test examples: 286
+Epoch 0: 112 / 286
+Epoch 1: 108 / 286
+Epoch 2: 145 / 286
+Epoch 9: 138 / 286
+Epoch 10: 110 / 286
+Epoch 11: 122 / 286
+Epoch 12: 138 / 286
+Epoch 17: 133 / 286
+Epoch 18: 139 / 286
+Epoch 19: 133 / 286
+Result after 20 epoches: 133 / 286  (46%)
+
+===== svm_traindata.txt.1a.ZDR_3.4_3.4.fuzzy =====
+dimension(Number of neurons for input layer) : 25
+number of training examples: 1142  test examples: 286
+Epoch 0: 106 / 286
+Epoch 1: 106 / 286
+Epoch 2: 131 / 286
+Epoch 9: 105 / 286
+Epoch 10: 128 / 286
+Epoch 11: 104 / 286
+Epoch 12: 123 / 286
+Epoch 17: 94 / 286
+Epoch 18: 110 / 286
+Epoch 19: 101 / 286
+Result after 20 epoches: 101 / 286  (35%)
+
+===== svm_traindata.txt.1a.ZDR_4.3_4.3.fuzzy =====
+dimension(Number of neurons for input layer) : 25
+number of training examples: 1141  test examples: 286
+Epoch 0: 0 / 286
+Epoch 1: 0 / 286
+Epoch 2: 0 / 286
+Epoch 9: 0 / 286
+Epoch 10: 0 / 286
+Epoch 11: 0 / 286
+Epoch 12: 0 / 286
+Epoch 17: 0 / 286
+Epoch 18: 0 / 286
+Epoch 19: 0 / 286
+Result after 20 epoches: 0 / 286  (0%)
+
+===== svm_traindata.txt.1a.ZDR_6.0_6.0.fuzzy =====
+dimension(Number of neurons for input layer) : 25
+number of training examples: 1140  test examples: 285
+Epoch 0: 129 / 285
+Epoch 1: 133 / 285
+Epoch 2: 134 / 285
+Epoch 9: 108 / 285
+Epoch 10: 129 / 285
+Epoch 11: 127 / 285
+Epoch 12: 107 / 285
+Epoch 17: 107 / 285
+Epoch 18: 136 / 285
+Epoch 19: 100 / 285
+Result after 20 epoches: 100 / 285  (35%)
+
+===== svm_traindata.txt.1a.Z_0.5_0.5.fuzzy =====
+dimension(Number of neurons for input layer) : 25
+number of training examples: 2200  test examples: 550
+Epoch 0: 329 / 550
+Epoch 1: 258 / 550
+Epoch 2: 258 / 550
+Epoch 9: 312 / 550
+Epoch 10: 259 / 550
+Epoch 11: 326 / 550
+Epoch 12: 263 / 550
+Epoch 17: 289 / 550
+Epoch 18: 295 / 550
+Epoch 19: 306 / 550
+Result after 20 epoches: 306 / 550  (55%)
+
+===== svm_traindata.txt.1a.Z_1.5_1.5.fuzzy =====
+dimension(Number of neurons for input layer) : 25
+number of training examples: 2196  test examples: 549
+Epoch 0: 310 / 549
+Epoch 1: 328 / 549
+Epoch 2: 256 / 549
+Epoch 9: 306 / 549
+Epoch 10: 196 / 549
+Epoch 11: 298 / 549
+Epoch 12: 253 / 549
+Epoch 17: 315 / 549
+Epoch 18: 258 / 549
+Epoch 19: 304 / 549
+Result after 20 epoches: 304 / 549  (55%)
+
+===== svm_traindata.txt.1a.Z_2.4_2.4.fuzzy =====
+dimension(Number of neurons for input layer) : 25
+number of training examples: 2194  test examples: 549
+Epoch 0: 248 / 549
+Epoch 1: 298 / 549
+Epoch 2: 301 / 549
+Epoch 9: 303 / 549
+Epoch 10: 298 / 549
+Epoch 11: 309 / 549
+Epoch 12: 302 / 549
+Epoch 17: 313 / 549
+Epoch 18: 309 / 549
+Epoch 19: 335 / 549
+Result after 20 epoches: 335 / 549  (61%)
+
+===== svm_traindata.txt.1a.Z_3.4_3.4.fuzzy =====
+dimension(Number of neurons for input layer) : 25
+number of training examples: 2194  test examples: 549
+Epoch 0: 285 / 549
+Epoch 1: 280 / 549
+Epoch 2: 313 / 549
+Epoch 9: 255 / 549
+Epoch 10: 258 / 549
+Epoch 11: 255 / 549
+Epoch 12: 286 / 549
+Epoch 17: 259 / 549
+Epoch 18: 246 / 549
+Epoch 19: 239 / 549
+Result after 20 epoches: 239 / 549  (43%)
+
+===== svm_traindata.txt.1a.Z_4.3_4.3.fuzzy =====
+dimension(Number of neurons for input layer) : 25
+number of training examples: 2193  test examples: 549
+Epoch 0: 303 / 549
+Epoch 1: 247 / 549
+Epoch 2: 300 / 549
+Epoch 9: 259 / 549
+Epoch 10: 295 / 549
+Epoch 11: 274 / 549
+Epoch 12: 258 / 549
+Epoch 17: 269 / 549
+Epoch 18: 280 / 549
+Epoch 19: 291 / 549
+Result after 20 epoches: 291 / 549  (53%)
+
+===== svm_traindata.txt.1a.Z_6.0_6.0.fuzzy =====
+dimension(Number of neurons for input layer) : 25
+number of training examples: 2189  test examples: 548
+Epoch 0: 296 / 548
+Epoch 1: 256 / 548
+Epoch 2: 286 / 548
+Epoch 9: 261 / 548
+Epoch 10: 279 / 548
+Epoch 11: 231 / 548
+Epoch 12: 245 / 548
+Epoch 17: 289 / 548
+Epoch 18: 198 / 548
+Epoch 19: 286 / 548
+Result after 20 epoches: 286 / 548  (52%)
+

@@ -1,0 +1,59 @@
+===== Training file list =====
+svm_traindata.txt.1a.KDP.joined_elev.fuzzy
+svm_traindata.txt.1a.Z.joined_elev.fuzzy
+svm_traindata.txt.1a.ZDR.joined_elev.fuzzy
+training_data_dir: D:\\svmdata.10minPrecipAsLabel.FuzzyLabel\svm_case2.3.2_merged_all_joined_mid_mean_max5_elev
+rainfall_min_value: 0
+rainfall_max_value: 100
+n_rainfall_indexes(Number of neurons for output-layer): 100
+size_hidden_layer(Number of neurons for hidden-layer): 30
+kernel type: Sigmoid
+epoches: 20
+mini_batch_size: 10
+training_rate: 2.0
+
+===== svm_traindata.txt.1a.KDP.joined_elev.fuzzy =====
+dimension(Number of neurons for input layer) : 42
+number of training examples: 1139  test examples: 285
+Epoch 0: 115 / 285
+Epoch 1: 121 / 285
+Epoch 2: 122 / 285
+Epoch 9: 123 / 285
+Epoch 10: 127 / 285
+Epoch 11: 137 / 285
+Epoch 12: 125 / 285
+Epoch 17: 135 / 285
+Epoch 18: 129 / 285
+Epoch 19: 138 / 285
+Result after 20 epoches: 138 / 285  (48%)
+
+===== svm_traindata.txt.1a.Z.joined_elev.fuzzy =====
+dimension(Number of neurons for input layer) : 42
+number of training examples: 2188  test examples: 547
+Epoch 0: 0 / 547
+Epoch 1: 2 / 547
+Epoch 2: 267 / 547
+Epoch 9: 210 / 547
+Epoch 10: 255 / 547
+Epoch 11: 307 / 547
+Epoch 12: 257 / 547
+Epoch 17: 257 / 547
+Epoch 18: 295 / 547
+Epoch 19: 257 / 547
+Result after 20 epoches: 257 / 547  (46%)
+
+===== svm_traindata.txt.1a.ZDR.joined_elev.fuzzy =====
+dimension(Number of neurons for input layer) : 42
+number of training examples: 1138  test examples: 285
+Epoch 0: 0 / 285
+Epoch 1: 0 / 285
+Epoch 2: 0 / 285
+Epoch 9: 128 / 285
+Epoch 10: 90 / 285
+Epoch 11: 125 / 285
+Epoch 12: 127 / 285
+Epoch 17: 129 / 285
+Epoch 18: 126 / 285
+Epoch 19: 125 / 285
+Result after 20 epoches: 125 / 285  (43%)
+
