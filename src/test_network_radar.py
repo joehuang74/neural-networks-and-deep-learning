@@ -1,3 +1,7 @@
+# NOTE1: Modify result_log_dir, training_data_dir to switch between feature directories.
+# NOTE2: Modify case_list to set the list of cases for doing the experiments.
+# NOTE3: To save the standard output to a file(eg. test_network_radar.stdout.log),
+#        Run -> Run Configurations... -> Common tab -> Standard input and output -> File; also check the "append" checkbox.
 import light_format_feature_loader
 import network
 import glob
@@ -10,25 +14,12 @@ rainfall_max_value = 100
 n_rainfall_indexes = 100 # for use in vectorized form of rainfall label (number of neurons for output layer)
 size_hidden_layer = 30 # Number of neurons for hidden layer
 
-case_list = []
-#case_list.append(CASE1_SINGLE)
-case_list.append(CASE2_1_STAT)
-case_list.append(CASE2_2_1_JOINED_MID_MEAN)
-case_list.append(CASE2_2_2_JOINED_MID_MEAN_ELEV)
-###case_list.append(CASE2_2_3_JOINED_MID_MEAN_PROD)
-#case_list.append(CASE2_3_1_JOINED_MID_MEAN_MAX5)
-#case_list.append(CASE2_3_2_JOINED_MID_MEAN_MAX5_ELEV)
-###case_list.append(CASE2_3_3_JOINED_MID_MEAN_MAX5_PROD)
-case_list.append(CASE2_4_1_JOINED_MID_MEAN_MIN5)
-case_list.append(CASE2_4_2_JOINED_MID_MEAN_MIN5_ELEV)
-###case_list.append(CASE2_4_3_JOINED_MID_MEAN_MIN5_PROD)
-#case_list.append(CASE3_1_JOINED_ELEV)
-#case_list.append(CASE3_2_JOINED_PROD)
+case_list = CASE_LIST_EXP2 # Refer to case_config.py
 
-#result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel
+result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel
 #result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_HourlyAggr
 #result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_FuzzyLabel
-result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_HourlyAggr_FuzzyLabel
+#result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_HourlyAggr_FuzzyLabel
 
 if not os.path.exists(result_log_dir):
     os.makedirs(result_log_dir)
@@ -40,10 +31,10 @@ previous_case_dir = case_list[0]
 result_log_file = result_log_dir + "/" + case_list[0] + ".log"
 log_fp = open(result_log_file, 'a')
 for case_dir in case_list:
-    #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel + "\\" + case_dir
+    training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel + "\\" + case_dir
     #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_HourlyAggr + "\\" + case_dir
     #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_FuzzyLabel + "\\" + case_dir
-    training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_HourlyAggr_FuzzyLabel + "\\" + case_dir
+    #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_HourlyAggr_FuzzyLabel + "\\" + case_dir
     result_log_file = result_log_dir + "/" + case_dir + ".log"
     
     if previous_case_dir != case_dir:
