@@ -14,7 +14,7 @@ rainfall_max_value = 100
 n_rainfall_indexes = 100 # for use in vectorized form of rainfall label (number of neurons for output layer)
 size_hidden_layer = 30 # Number of neurons for hidden layer
 
-case_list = CASE_LIST_EXP2 # Refer to case_config.py
+case_list = CASE_LIST_EXP3 # Refer to case_config.py
 
 result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel
 #result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_HourlyAggr
