@@ -1,0 +1,11 @@
+===== Training file list =====
+training_data_dir: D:\\svmdata.10minPrecipAsLabel.HourlyAggr.FuzzyLabel\svm_case2.7.1_merged_all_joined_mid_mean_max50_min50
+rainfall_min_value: 0
+rainfall_max_value: 100
+n_rainfall_indexes(Number of neurons for output-layer): 100
+size_hidden_layer(Number of neurons for hidden-layer): 30
+kernel type: Sigmoid
+epoches: 20
+mini_batch_size: 10
+training_rate: 2.0
+
