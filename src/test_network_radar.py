@@ -14,12 +14,14 @@ rainfall_max_value = 100
 n_rainfall_indexes = 100 # for use in vectorized form of rainfall label (number of neurons for output layer)
 size_hidden_layer = 30 # Number of neurons for hidden layer
 
-case_list = CASE_LIST_EXP3 # Refer to case_config.py
+case_list = CASE_LIST_BASIC # Refer to case_config.py
 
-result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel
+#result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel
 #result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_HourlyAggr
 #result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_FuzzyLabel
 #result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_HourlyAggr_FuzzyLabel
+result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_EqualSize_FuzzyLabel
+#result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_EqualSize_HourlyAggr_FuzzyLabel
 
 if not os.path.exists(result_log_dir):
     os.makedirs(result_log_dir)
@@ -31,10 +33,12 @@ previous_case_dir = case_list[0]
 result_log_file = result_log_dir + "/" + case_list[0] + ".log"
 log_fp = open(result_log_file, 'a')
 for case_dir in case_list:
-    training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel + "\\" + case_dir
+    #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel + "\\" + case_dir
     #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_HourlyAggr + "\\" + case_dir
     #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_FuzzyLabel + "\\" + case_dir
     #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_HourlyAggr_FuzzyLabel + "\\" + case_dir
+    training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_EqualSize_FuzzyLabel + "\\" + case_dir
+    #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_EqualSize_HourlyAggr_FuzzyLabel + "\\" + case_dir
     result_log_file = result_log_dir + "/" + case_dir + ".log"
     
     if previous_case_dir != case_dir:
