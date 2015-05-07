@@ -8,20 +8,15 @@ import glob
 import os
 import shutil
 from case_config import *
+from run_config_nn import *
 
 rainfall_min_value = 0
 rainfall_max_value = 100
 n_rainfall_indexes = 100 # for use in vectorized form of rainfall label (number of neurons for output layer)
 size_hidden_layer = 30 # Number of neurons for hidden layer
 
-case_list = CASE_LIST_BASIC # Refer to case_config.py
-
-#result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel
-#result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_HourlyAggr
-#result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_FuzzyLabel
-#result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_HourlyAggr_FuzzyLabel
-result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_EqualSize_FuzzyLabel
-#result_log_dir = "../log/" + SVMDATA_10minPrecAsLabel_EqualSize_HourlyAggr_FuzzyLabel
+case_list = CASE_LIST_TO_RUN # Refer to run_config_nn.py case_config.py
+result_log_dir = "../log/" + WORKING_SVMDATA_DIR
 
 if not os.path.exists(result_log_dir):
     os.makedirs(result_log_dir)
@@ -33,12 +28,7 @@ previous_case_dir = case_list[0]
 result_log_file = result_log_dir + "/" + case_list[0] + ".log"
 log_fp = open(result_log_file, 'a')
 for case_dir in case_list:
-    #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel + "\\" + case_dir
-    #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_HourlyAggr + "\\" + case_dir
-    #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_FuzzyLabel + "\\" + case_dir
-    #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_HourlyAggr_FuzzyLabel + "\\" + case_dir
-    training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_EqualSize_FuzzyLabel + "\\" + case_dir
-    #training_data_dir = "D:\\\\" + SVMDATA_10minPrecAsLabel_EqualSize_HourlyAggr_FuzzyLabel + "\\" + case_dir
+    feature_data_dir = FEATURE_DIR_ROOT + WORKING_SVMDATA_DIR + "\\" + case_dir
     result_log_file = result_log_dir + "/" + case_dir + ".log"
     
     if previous_case_dir != case_dir:
@@ -46,7 +36,7 @@ for case_dir in case_list:
     if log_fp.closed:
         log_fp = open(result_log_file, 'a')
 
-    filepath_list = glob.glob(training_data_dir + "\svm_traindata.txt.1a.*")
+    filepath_list = glob.glob(feature_data_dir + "\svm_traindata.txt.1a.*")
 
     filename_list = []
     print "==== Training file list ===="
@@ -73,11 +63,11 @@ for case_dir in case_list:
     """
     Hyper-parameters
     """
-    epoches = 20
+    epoches = 50
     mini_batch_size = 10
     training_rate = 2.0
 
-    log_fp.write("training_data_dir: {0}\n".format(training_data_dir))
+    log_fp.write("feature_data_dir: {0}\n".format(feature_data_dir))
     log_fp.write("rainfall_min_value: {0}\n".format(rainfall_min_value))
     log_fp.write("rainfall_max_value: {0}\n".format(rainfall_max_value))
     log_fp.write("n_rainfall_indexes(Number of neurons for output-layer): {0}\n".format(n_rainfall_indexes))
@@ -91,12 +81,12 @@ for case_dir in case_list:
     Train and evaluate the network for the given list of training files
     """
     for filename in filename_list:
-        training_file = training_data_dir + "/" + filename
+        feature_file = feature_data_dir + "/" + filename
         training_data, validation_data, test_data, dimension = \
-        light_format_feature_loader.load_data_wrapper(training_file, rainfall_min_value, rainfall_max_value, n_rainfall_indexes)
+        light_format_feature_loader.load_data_wrapper(feature_file, rainfall_min_value, rainfall_max_value, n_rainfall_indexes)
    
         if training_data == None:
-            print "[ERROR] Training data in {0} is None, skipped training task".format(training_file)
+            print "[ERROR] Training data in {0} is None, skipped training task".format(feature_file)
             continue
 
         log_fp.write("===== {0} =====\n".format(filename));
