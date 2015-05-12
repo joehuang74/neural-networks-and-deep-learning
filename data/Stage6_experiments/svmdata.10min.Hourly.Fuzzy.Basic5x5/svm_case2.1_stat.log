@@ -1,0 +1,155 @@
+===== Training file list =====
+svm_traindata.txt.1a.KDP_0.5_0.5.max5.Hourly.fuzzy
+svm_traindata.txt.1a.KDP_0.5_0.5.mean.Hourly.fuzzy
+svm_traindata.txt.1a.KDP_0.5_0.5.mid.Hourly.fuzzy
+svm_traindata.txt.1a.ZDR_0.5_0.5.max5.Hourly.fuzzy
+svm_traindata.txt.1a.ZDR_0.5_0.5.mean.Hourly.fuzzy
+svm_traindata.txt.1a.ZDR_0.5_0.5.mid.Hourly.fuzzy
+svm_traindata.txt.1a.Z_0.5_0.5.max5.Hourly.fuzzy
+svm_traindata.txt.1a.Z_0.5_0.5.mean.Hourly.fuzzy
+svm_traindata.txt.1a.Z_0.5_0.5.mid.Hourly.fuzzy
+feature_data_dir: D:\\svmdata.10min.Hourly.Fuzzy\svm_case2.1_stat
+rainfall_min_value: 0
+rainfall_max_value: 100
+n_rainfall_indexes(Number of neurons for output-layer): 100
+size_hidden_layer(Number of neurons for hidden-layer): 30
+kernel type: Sigmoid
+epoches: 50
+mini_batch_size: 10
+training_rate: 1.0
+
+===== svm_traindata.txt.1a.KDP_0.5_0.5.max5.Hourly.fuzzy =====
+dimension(Number of neurons for input layer) : 5
+number of training examples: 143  test examples: 36
+Epoch 0: 0 / 36
+Epoch 1: 0 / 36
+Epoch 2: 0 / 36
+Epoch 24: 24 / 36
+Epoch 25: 24 / 36
+Epoch 26: 24 / 36
+Epoch 27: 24 / 36
+Epoch 47: 24 / 36
+Epoch 48: 24 / 36
+Epoch 49: 24 / 36
+Result after 50 epoches: 24 / 36  (66%)
+
+===== svm_traindata.txt.1a.KDP_0.5_0.5.mean.Hourly.fuzzy =====
+dimension(Number of neurons for input layer) : 1
+number of training examples: 143  test examples: 36
+Epoch 0: 0 / 36
+Epoch 1: 0 / 36
+Epoch 2: 0 / 36
+Epoch 24: 23 / 36
+Epoch 25: 23 / 36
+Epoch 26: 12 / 36
+Epoch 27: 25 / 36
+Epoch 47: 24 / 36
+Epoch 48: 24 / 36
+Epoch 49: 23 / 36
+Result after 50 epoches: 23 / 36  (63%)
+
+===== svm_traindata.txt.1a.KDP_0.5_0.5.mid.Hourly.fuzzy =====
+dimension(Number of neurons for input layer) : 1
+number of training examples: 143  test examples: 36
+Epoch 0: 0 / 36
+Epoch 1: 0 / 36
+Epoch 2: 0 / 36
+Epoch 24: 23 / 36
+Epoch 25: 23 / 36
+Epoch 26: 23 / 36
+Epoch 27: 13 / 36
+Epoch 47: 23 / 36
+Epoch 48: 24 / 36
+Epoch 49: 13 / 36
+Result after 50 epoches: 13 / 36  (36%)
+
+===== svm_traindata.txt.1a.ZDR_0.5_0.5.max5.Hourly.fuzzy =====
+dimension(Number of neurons for input layer) : 5
+number of training examples: 143  test examples: 36
+Epoch 0: 0 / 36
+Epoch 1: 0 / 36
+Epoch 2: 0 / 36
+Epoch 24: 16 / 36
+Epoch 25: 22 / 36
+Epoch 26: 23 / 36
+Epoch 27: 23 / 36
+Epoch 47: 21 / 36
+Epoch 48: 24 / 36
+Epoch 49: 23 / 36
+Result after 50 epoches: 23 / 36  (63%)
+
+===== svm_traindata.txt.1a.ZDR_0.5_0.5.mean.Hourly.fuzzy =====
+dimension(Number of neurons for input layer) : 1
+number of training examples: 143  test examples: 36
+Epoch 0: 0 / 36
+Epoch 1: 0 / 36
+Epoch 2: 0 / 36
+Epoch 24: 14 / 36
+Epoch 25: 23 / 36
+Epoch 26: 11 / 36
+Epoch 27: 12 / 36
+Epoch 47: 11 / 36
+Epoch 48: 23 / 36
+Epoch 49: 23 / 36
+Result after 50 epoches: 23 / 36  (63%)
+
+===== svm_traindata.txt.1a.ZDR_0.5_0.5.mid.Hourly.fuzzy =====
+dimension(Number of neurons for input layer) : 1
+number of training examples: 143  test examples: 36
+Epoch 0: 0 / 36
+Epoch 1: 0 / 36
+Epoch 2: 0 / 36
+Epoch 24: 23 / 36
+Epoch 25: 11 / 36
+Epoch 26: 23 / 36
+Epoch 27: 23 / 36
+Epoch 47: 23 / 36
+Epoch 48: 12 / 36
+Epoch 49: 23 / 36
+Result after 50 epoches: 23 / 36  (63%)
+
+===== svm_traindata.txt.1a.Z_0.5_0.5.max5.Hourly.fuzzy =====
+dimension(Number of neurons for input layer) : 5
+number of training examples: 268  test examples: 68
+Epoch 0: 0 / 68
+Epoch 1: 0 / 68
+Epoch 2: 0 / 68
+Epoch 24: 37 / 68
+Epoch 25: 37 / 68
+Epoch 26: 25 / 68
+Epoch 27: 37 / 68
+Epoch 47: 26 / 68
+Epoch 48: 37 / 68
+Epoch 49: 26 / 68
+Result after 50 epoches: 26 / 68  (38%)
+
+===== svm_traindata.txt.1a.Z_0.5_0.5.mean.Hourly.fuzzy =====
+dimension(Number of neurons for input layer) : 1
+number of training examples: 268  test examples: 68
+Epoch 0: 0 / 68
+Epoch 1: 1 / 68
+Epoch 2: 1 / 68
+Epoch 24: 3 / 68
+Epoch 25: 3 / 68
+Epoch 26: 4 / 68
+Epoch 27: 4 / 68
+Epoch 47: 3 / 68
+Epoch 48: 2 / 68
+Epoch 49: 3 / 68
+Result after 50 epoches: 3 / 68  (4%)
+
+===== svm_traindata.txt.1a.Z_0.5_0.5.mid.Hourly.fuzzy =====
+dimension(Number of neurons for input layer) : 1
+number of training examples: 268  test examples: 68
+Epoch 0: 0 / 68
+Epoch 1: 31 / 68
+Epoch 2: 38 / 68
+Epoch 24: 45 / 68
+Epoch 25: 42 / 68
+Epoch 26: 42 / 68
+Epoch 27: 37 / 68
+Epoch 47: 37 / 68
+Epoch 48: 37 / 68
+Epoch 49: 42 / 68
+Result after 50 epoches: 42 / 68  (61%)
+

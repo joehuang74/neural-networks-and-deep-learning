@@ -1,0 +1,155 @@
+===== Training file list =====
+svm_traindata.txt.1a.KDP_0.5_0.5.max5.fuzzy
+svm_traindata.txt.1a.KDP_0.5_0.5.mean.fuzzy
+svm_traindata.txt.1a.KDP_0.5_0.5.mid.fuzzy
+svm_traindata.txt.1a.ZDR_0.5_0.5.max5.fuzzy
+svm_traindata.txt.1a.ZDR_0.5_0.5.mean.fuzzy
+svm_traindata.txt.1a.ZDR_0.5_0.5.mid.fuzzy
+svm_traindata.txt.1a.Z_0.5_0.5.max5.fuzzy
+svm_traindata.txt.1a.Z_0.5_0.5.mean.fuzzy
+svm_traindata.txt.1a.Z_0.5_0.5.mid.fuzzy
+feature_data_dir: D:\\svmdata.10min.Fuzzy\svm_case2.1_stat
+rainfall_min_value: 0
+rainfall_max_value: 100
+n_rainfall_indexes(Number of neurons for output-layer): 100
+size_hidden_layer(Number of neurons for hidden-layer): 30
+kernel type: Sigmoid
+epoches: 50
+mini_batch_size: 10
+training_rate: 1.0
+
+===== svm_traindata.txt.1a.KDP_0.5_0.5.max5.fuzzy =====
+dimension(Number of neurons for input layer) : 5
+number of training examples: 1145  test examples: 287
+Epoch 0: 108 / 287
+Epoch 1: 126 / 287
+Epoch 2: 124 / 287
+Epoch 24: 131 / 287
+Epoch 25: 131 / 287
+Epoch 26: 123 / 287
+Epoch 27: 123 / 287
+Epoch 47: 135 / 287
+Epoch 48: 128 / 287
+Epoch 49: 131 / 287
+Result after 50 epoches: 131 / 287  (45%)
+
+===== svm_traindata.txt.1a.KDP_0.5_0.5.mean.fuzzy =====
+dimension(Number of neurons for input layer) : 1
+number of training examples: 1145  test examples: 287
+Epoch 0: 0 / 287
+Epoch 1: 0 / 287
+Epoch 2: 0 / 287
+Epoch 24: 113 / 287
+Epoch 25: 127 / 287
+Epoch 26: 155 / 287
+Epoch 27: 116 / 287
+Epoch 47: 138 / 287
+Epoch 48: 136 / 287
+Epoch 49: 121 / 287
+Result after 50 epoches: 121 / 287  (42%)
+
+===== svm_traindata.txt.1a.KDP_0.5_0.5.mid.fuzzy =====
+dimension(Number of neurons for input layer) : 1
+number of training examples: 1145  test examples: 287
+Epoch 0: 124 / 287
+Epoch 1: 108 / 287
+Epoch 2: 108 / 287
+Epoch 24: 105 / 287
+Epoch 25: 106 / 287
+Epoch 26: 108 / 287
+Epoch 27: 105 / 287
+Epoch 47: 109 / 287
+Epoch 48: 137 / 287
+Epoch 49: 106 / 287
+Result after 50 epoches: 106 / 287  (36%)
+
+===== svm_traindata.txt.1a.ZDR_0.5_0.5.max5.fuzzy =====
+dimension(Number of neurons for input layer) : 5
+number of training examples: 1145  test examples: 287
+Epoch 0: 0 / 287
+Epoch 1: 0 / 287
+Epoch 2: 0 / 287
+Epoch 24: 100 / 287
+Epoch 25: 110 / 287
+Epoch 26: 112 / 287
+Epoch 27: 108 / 287
+Epoch 47: 113 / 287
+Epoch 48: 117 / 287
+Epoch 49: 105 / 287
+Result after 50 epoches: 105 / 287  (36%)
+
+===== svm_traindata.txt.1a.ZDR_0.5_0.5.mean.fuzzy =====
+dimension(Number of neurons for input layer) : 1
+number of training examples: 1145  test examples: 287
+Epoch 0: 107 / 287
+Epoch 1: 108 / 287
+Epoch 2: 108 / 287
+Epoch 24: 108 / 287
+Epoch 25: 108 / 287
+Epoch 26: 96 / 287
+Epoch 27: 108 / 287
+Epoch 47: 108 / 287
+Epoch 48: 108 / 287
+Epoch 49: 86 / 287
+Result after 50 epoches: 86 / 287  (29%)
+
+===== svm_traindata.txt.1a.ZDR_0.5_0.5.mid.fuzzy =====
+dimension(Number of neurons for input layer) : 1
+number of training examples: 1145  test examples: 287
+Epoch 0: 109 / 287
+Epoch 1: 108 / 287
+Epoch 2: 125 / 287
+Epoch 24: 115 / 287
+Epoch 25: 115 / 287
+Epoch 26: 103 / 287
+Epoch 27: 107 / 287
+Epoch 47: 115 / 287
+Epoch 48: 111 / 287
+Epoch 49: 108 / 287
+Result after 50 epoches: 108 / 287  (37%)
+
+===== svm_traindata.txt.1a.Z_0.5_0.5.max5.fuzzy =====
+dimension(Number of neurons for input layer) : 5
+number of training examples: 2200  test examples: 550
+Epoch 0: 0 / 550
+Epoch 1: 0 / 550
+Epoch 2: 0 / 550
+Epoch 24: 255 / 550
+Epoch 25: 258 / 550
+Epoch 26: 249 / 550
+Epoch 27: 234 / 550
+Epoch 47: 258 / 550
+Epoch 48: 258 / 550
+Epoch 49: 258 / 550
+Result after 50 epoches: 258 / 550  (46%)
+
+===== svm_traindata.txt.1a.Z_0.5_0.5.mean.fuzzy =====
+dimension(Number of neurons for input layer) : 1
+number of training examples: 2200  test examples: 550
+Epoch 0: 306 / 550
+Epoch 1: 306 / 550
+Epoch 2: 330 / 550
+Epoch 24: 285 / 550
+Epoch 25: 282 / 550
+Epoch 26: 280 / 550
+Epoch 27: 294 / 550
+Epoch 47: 258 / 550
+Epoch 48: 279 / 550
+Epoch 49: 289 / 550
+Result after 50 epoches: 289 / 550  (52%)
+
+===== svm_traindata.txt.1a.Z_0.5_0.5.mid.fuzzy =====
+dimension(Number of neurons for input layer) : 1
+number of training examples: 2200  test examples: 550
+Epoch 0: 258 / 550
+Epoch 1: 305 / 550
+Epoch 2: 290 / 550
+Epoch 24: 306 / 550
+Epoch 25: 314 / 550
+Epoch 26: 354 / 550
+Epoch 27: 318 / 550
+Epoch 47: 258 / 550
+Epoch 48: 258 / 550
+Epoch 49: 322 / 550
+Result after 50 epoches: 322 / 550  (58%)
+
